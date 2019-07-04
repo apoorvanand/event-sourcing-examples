@@ -11,7 +11,9 @@
     "watch": "webpack --progress --colors --watch --display-error-details --display-chunks --profile",
     "start-dev": "export PORT=3000 && webpack-dev-server --host 0.0.0.0",
     "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install",
-    "test-e2e": "nightwatch"
+    "test-e2e": "nightwatch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
@@ -74,6 +76,8 @@
     "redux-logger": "^2.6.0",
     "redux-multi": "^0.1.91",
     "redux-router": "^1.0.0-beta7",
-    "redux-thunk": "^1.0.3"
-  }
+    "redux-thunk": "^1.0.3",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
